@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RecipeBook>
+    <Recipe calories="100">
+        <Type>Закуски</Type>
+        <Name>Бутерброд</Name>
+        <Weight>30 грамм</Weight>
+        <RecipeText>Положить хлеб, колбасу и сыр друг на друга</RecipeText>
+        <Ingredient1 amount="5">Хлеб</Ingredient1>
+        <Ingredient2 amount="15">Колбаса</Ingredient2>
+        <Ingredient3 amount="10">Сыр</Ingredient3>
+    </Recipe>
+    <Recipe calories="200">
+        <Type>Основное блюдо</Type>
+        <Name>Глазунья</Name>
+        <Weight>100 грамм</Weight>
+        <RecipeText>Разбить яйца на сковородку, посолить, не взбалтывать</RecipeText>
+        <Ingredient1 amount="2">Яйцо</Ingredient1>
+        <Ingredient2 amount="1">Соль</Ingredient2>
+    </Recipe>
+    <Recipe calories="200">
+        <Type>Основное блюдо</Type>
+        <Name>Омлет</Name>
+        <Weight>100 грамм</Weight>
+        <RecipeText>Разбить яйца на сковородку, посолить, взбалтывать</RecipeText>
+        <Ingredient1 amount="2">Яйцо</Ingredient1>
+        <Ingredient2 amount="1">Соль</Ingredient2>
+    </Recipe>
+    <Recipe calories="50">
+        <Type>Салат</Type>
+        <Name>Салат из овощей</Name>
+        <Weight>200 грамм</Weight>
+        <RecipeText>Огурец и помидоры эстетично выложить на тарелку, по желанию измельчить</RecipeText>
+        <Ingredient1 amount="3">Помидор</Ingredient1>
+        <Ingredient2 amount="2">Огурец</Ingredient2>
+    </Recipe>
+    <Recipe calories="400">
+        <Type>Десерт</Type>
+        <Name>Торт с нутеллой</Name>
+        <Weight>300 грамм</Weight>
+        <RecipeText>Печенье выложить слоями произвольных размеров и скрепить нутеллой</RecipeText>
+        <Ingredient1 amount="1">Нутелла</Ingredient1>
+        <Ingredient2 amount="20">Печенье</Ingredient2>
+    </Recipe>
+</RecipeBook>
+
