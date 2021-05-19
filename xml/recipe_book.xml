@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='../xsl/recipe_book.xsl'?>
 <RecipeBook>
     <Recipe calories="90">
         <Type>Закуски</Type>
@@ -6,7 +6,7 @@
         <Weight>30 грамм</Weight>
         <RecipeText>Намазать масло на хлеб и посыпать солью</RecipeText>
         <Ingredient1 amount="5">Хлеб</Ingredient1>
-        <Ingredient3 amount="1">Масло</Ingredient3>
+        <Ingredient2 amount="1">Масло</Ingredient2>
         <Ingredient3 amount="1">Соль</Ingredient3>
     </Recipe>
     <Recipe calories="100">
@@ -15,7 +15,7 @@
         <Weight>30 грамм</Weight>
         <RecipeText>Положить хлеб и сыр друг на друга</RecipeText>
         <Ingredient1 amount="5">Хлеб</Ingredient1>
-        <Ingredient3 amount="10">Сыр</Ingredient3>
+        <Ingredient2 amount="10">Сыр</Ingredient2>
     </Recipe>
     <Recipe calories="110">
         <Type>Закуски</Type>
@@ -23,7 +23,7 @@
         <Weight>30 грамм</Weight>
         <RecipeText>Намазать масло на хлеб, положить поверх сыр</RecipeText>
         <Ingredient1 amount="5">Хлеб</Ingredient1>
-        <Ingredient3 amount="10">Сыр</Ingredient3>
+        <Ingredient2 amount="10">Сыр</Ingredient2>
         <Ingredient3 amount="1">Масло</Ingredient3>
     </Recipe>
     <Recipe calories="150">
@@ -49,8 +49,8 @@
         <Weight>30 грамм</Weight>
         <RecipeText>Намазать хлеб маслом, положить поверх сыр и колбасу</RecipeText>
         <Ingredient1 amount="5">Хлеб</Ingredient1>
-        <Ingredient2 amount="15">Колбаса</Ingredient2>
-        <Ingredient3 amount="10">Сыр</Ingredient3>
+        <Ingredient1 amount="15">Колбаса</Ingredient1>
+        <Ingredient2 amount="10">Сыр</Ingredient2>
         <Ingredient3 amount="1">Масло</Ingredient3>
     </Recipe>
     <Recipe calories="200">
