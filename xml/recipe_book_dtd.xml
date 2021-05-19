@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE RecipeBook [
+	<!ELEMENT RecipeBook (Recipe)+>
+	<!ELEMENT Recipe (Type,Name,Weight,RecipeText,Ingredient+)>
+	<!ATTLIST Recipe calories CDATA #REQUIRED >
+	<!ELEMENT Type (#PCDATA)>
+	<!ELEMENT Name (#PCDATA)>
+	<!ELEMENT Weight (#PCDATA)>
+	<!ELEMENT RecipeText (#PCDATA)>
+	<!ELEMENT Ingredient (#PCDATA)>
+	<!ATTLIST Ingredient amount CDATA #REQUIRED >
+]>
 <RecipeBook>
     <Recipe calories="90">
         <Type>Закуски</Type>
