@@ -1,0 +1,45 @@
+<style>
+    table {
+        border: solid 1px black;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: solid 1px black;
+        padding: 5px;
+    }
+</style>
+
+<script src="../jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(() => {
+        fetch('../xml/recipe_book.xml')
+            .then(res => res.text())
+            .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+            .then(data => {
+                Array.prototype.slice.call(data.getElementsByTagName("Recipe"))
+                .forEach(node => {
+                    const calories = node.getAttribute('calories');
+                    const type = node.children [0].innerHTML;
+                    const name = node.children [1].innerHTML;
+                    const weight = node.children [2].innerHTML;
+                    const recipeText = node.children [3].innerHTML;
+                    $('#table').append(`<tr><td>${name}</td><td>${type}</td><td>${calories}</td><td>${weight}</td><td>${recipeText}</td></tr>`);
+                })
+            });
+    });
+</script>
+
+<div>
+    <h3>Вариант 12</h3>
+
+    <p>1. Загрузите документ XML, разработанный в предыдущих работах, в объект
+        документ и отобразите в окне браузера.<br>
+        2. Используя методы DOM XML, сформируйте HTML страницу, содержащую
+        таблицу из нескольких столбцов.<br>
+        3. Используя методы DOM XML, замените цифровые значения их словесными
+        эквивалентами.<br></p>
+
+    <table id="table">
+        <th>Название</th><th>Тип</th><th>Калории</th><th>Вес (г)</th><th>Рецепт</th>
+    </table>
+</div>
