@@ -9,23 +9,28 @@
     }
 </style>
 
-<script src="../jquery-3.6.0.min.js"></script>
 <script>
-    $(document).ready(() => {
-        fetch('../xml/recipe_book.xml')
-            .then(res => res.text())
-            .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
-            .then(data => {
+    document.addEventListener("DOMContentLoaded", function () {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', '../xml/recipe_book.xml', true);
+        xhr.send();
+        xhr.addEventListener('readystatechange', function(e){
+            if( xhr.readyState !== 4  ) return;
+            if( xhr.status === 200 ){
+                const data = new window.DOMParser().parseFromString(xhr.responseText, "text/xml");
                 Array.prototype.slice.call(data.getElementsByTagName("Recipe"))
-                .forEach(node => {
-                    const calories = node.getAttribute('calories');
-                    const type = node.children [0].innerHTML;
-                    const name = node.children [1].innerHTML;
-                    const weight = node.children [2].innerHTML;
-                    const recipeText = node.children [3].innerHTML;
-                    $('#table').append(`<tr><td>${name}</td><td>${type}</td><td>${calories}</td><td>${weight}</td><td>${recipeText}</td></tr>`);
-                })
-            });
+                    .forEach(function (node) {
+                        const calories = node.getAttribute('calories');
+                        const type = node.children [0].innerHTML;
+                        const name = node.children [1].innerHTML;
+                        const weight = node.children [2].innerHTML;
+                        const recipeText = node.children [3].innerHTML;
+                        const row = document.createElement('tr');
+                        row.innerHTML = '<tr><td>' + calories + '</td><td>' + type + '</td><td>' + name + '</td><td>' + weight + '</td><td>' + recipeText + '</td></tr>';
+                        document.getElementById('table').appendChild(row);
+                    });
+            }
+        });
     });
 </script>
 
