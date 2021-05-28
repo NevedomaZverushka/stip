@@ -26,7 +26,7 @@
                         const weight = node.children [2].innerHTML;
                         const recipeText = node.children [3].innerHTML;
                         const row = document.createElement('tr');
-                        row.innerHTML = '<tr><td>' + calories + '</td><td>' + type + '</td><td>' + name + '</td><td>' + weight + '</td><td>' + recipeText + '</td></tr>';
+                        row.innerHTML = '<tr><td>' + name + '</td><td>' + type + '</td><td>' + calories + '</td><td>' + weight + '</td><td>' + recipeText + '</td></tr>';
                         document.getElementById('table').appendChild(row);
                     });
             }
