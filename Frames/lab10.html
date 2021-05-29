@@ -35,9 +35,9 @@
                     .forEach(function (node) {
                         const calories = node.getAttribute('calories');
                         const type = node.childNodes[0].textContent;
-                        const name = node.children[1].textContent;
-                        const weight = node.children[2].textContent;
-                        const recipeText = node.children[3].textContent;
+                        const name = node.childNodes[1].textContent;
+                        const weight = node.childNodes[2].textContent;
+                        const recipeText = node.childNodes[3].textContent;
                         const row = document.createElement('tr');
                         row.innerHTML = '<tr><td>' + name + '</td><td>' + type + '</td><td>' + toWord(calories) + '</td><td>' + weight + '</td><td>' + recipeText + '</td></tr>';
                         document.getElementById('table').appendChild(row);
