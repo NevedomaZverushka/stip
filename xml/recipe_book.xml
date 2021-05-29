@@ -17,7 +17,7 @@
         <Ingredient1 amount="5">Хлеб</Ingredient1>
         <Ingredient2 amount="10">Сыр</Ingredient2>
     </Recipe>
-    <Recipe calories="110">
+    <Recipe calories="100">
         <Type>Закуски</Type>
         <Name>Бутерброд с сыром и маслом</Name>
         <Weight>30 грамм</Weight>
@@ -26,7 +26,7 @@
         <Ingredient2 amount="10">Сыр</Ingredient2>
         <Ingredient3 amount="1">Масло</Ingredient3>
     </Recipe>
-    <Recipe calories="150">
+    <Recipe calories="100">
         <Type>Закуски</Type>
         <Name>Бутерброд с колбасой</Name>
         <Weight>30 грамм</Weight>

@@ -10,6 +10,19 @@
 </style>
 
 <script>
+    function toWord(number) {
+        switch (Number(number)) {
+            case 50: return 'Пятдесят';
+            case 90: return 'Девяносто';
+            case 100: return 'Сто';
+            case 180: return 'Сто восемьдесят';
+            case 190: return 'Сто девяносто';
+            case 200: return 'Двести';
+            case 400: return 'Четыреста';
+            default: return "";
+        }
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
         const xhr = new XMLHttpRequest();
         xhr.open('GET', '../xml/recipe_book.xml', true);
@@ -26,7 +39,7 @@
                         const weight = node.children [2].innerHTML;
                         const recipeText = node.children [3].innerHTML;
                         const row = document.createElement('tr');
-                        row.innerHTML = '<tr><td>' + name + '</td><td>' + type + '</td><td>' + calories + '</td><td>' + weight + '</td><td>' + recipeText + '</td></tr>';
+                        row.innerHTML = '<tr><td>' + name + '</td><td>' + type + '</td><td>' + toWord(calories) + '</td><td>' + weight + '</td><td>' + recipeText + '</td></tr>';
                         document.getElementById('table').appendChild(row);
                     });
             }
