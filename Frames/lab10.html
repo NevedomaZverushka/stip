@@ -34,12 +34,12 @@
                 Array.prototype.slice.call(data.getElementsByTagName("Recipe"))
                     .forEach(function (node) {
                         const calories = node.getAttribute('calories');
-                        const type = node.childNodes[3].textContent;
-                        const name = node.childNodes[1].textContent;
+                        const type = node.childNodes[1].textContent;
+                        const name = node.childNodes[3].textContent;
                         const weight = node.childNodes[5].textContent;
                         const recipeText = node.childNodes[7].textContent;
                         const row = document.createElement('tr');
-                        row.innerHTML = '<tr><td>' + name + '</td><td>' + type + '</td><td>' + toWord(calories) + '</td><td>' + weight + '</td><td>' + recipeText + '</td></tr>';
+                        row.innerHTML = '<tr><td>' + name + '</td><td>' + type + '</td><td>' + `${toWord(calories)} грамм` + '</td><td>' + weight + '</td><td>' + recipeText + '</td></tr>';
                         document.getElementById('table').appendChild(row);
                     });
             }
