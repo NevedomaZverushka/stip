@@ -39,7 +39,7 @@
                         const weight = node.childNodes[5].textContent;
                         const recipeText = node.childNodes[7].textContent;
                         const row = document.createElement('tr');
-                        row.innerHTML = '<tr><td>' + name + '</td><td>' + type + '</td><td>' + `${toWord(calories)} грамм` + '</td><td>' + weight + '</td><td>' + recipeText + '</td></tr>';
+                        row.innerHTML = '<tr><td>' + name + '</td><td>' + type + '</td><td>' + toWord(calories) + 'грамм' + '</td><td>' + weight + '</td><td>' + recipeText + '</td></tr>';
                         document.getElementById('table').appendChild(row);
                     });
             }
