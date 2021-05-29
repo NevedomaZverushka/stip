@@ -34,10 +34,10 @@
                 Array.prototype.slice.call(data.getElementsByTagName("Recipe"))
                     .forEach(function (node) {
                         const calories = node.getAttribute('calories');
-                        const type = node.children [0].innerHTML;
-                        const name = node.children [1].innerHTML;
-                        const weight = node.children [2].innerHTML;
-                        const recipeText = node.children [3].innerHTML;
+                        const type = node.childNodes[0].textContent;
+                        const name = node.children[1].textContent;
+                        const weight = node.children[2].textContent;
+                        const recipeText = node.children[3].textContent;
                         const row = document.createElement('tr');
                         row.innerHTML = '<tr><td>' + name + '</td><td>' + type + '</td><td>' + toWord(calories) + '</td><td>' + weight + '</td><td>' + recipeText + '</td></tr>';
                         document.getElementById('table').appendChild(row);
