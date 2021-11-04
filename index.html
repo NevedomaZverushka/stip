@@ -1,14 +1,36 @@
-<!DOCTYPE html >
-
-<html lang="ru">
+<html>
     <head>
-        <title>STIP</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <title>Пузіно М.В. - Варіант 12</title>
     </head>
-    <frameset rows="*" cols="100,*">
-        <frame src="Frames/side_menu.html" name="side_menu">
-        <frameset rows="180,*">
-            <frame src="Frames/header.html" name="header">
-            <frame src="Frames/lab1.html" name="lab_block">
-        </frameset>
-    </frameset>
+    <body>
+        <select id="days_of_the_week">
+            <option disabled selected hidden>Оберіть день тижня</option>
+            <option value="monday">Понеділок</option>
+            <option value="tuesday">Вівторок</option>
+            <option value="wednesday">Середа</option>
+            <option value="thursday">Четвер</option>
+            <option value="friday">П'ятниця</option>
+            <option value="saturday">Субота</option>
+            <option value="sunday">Неділя</option>
+        </select>
+
+        <select id="schedule"></select>
+    </body>
+    <script>
+        $("#days_of_the_week").change(() => {
+            $.get("get_schedule.php", {
+                dayOfTheWeek: $("select option:selected").attr('value'),
+            })
+                .done((schedule) => {
+                    $('#schedule')
+                        .find('option')
+                        .remove()
+                    schedule.forEach(lesson => {
+                        $('#schedule').append($(`<option value="${lesson}">${lesson}</option>`))
+                    })
+                });
+        });
+    </script>
 </html>
